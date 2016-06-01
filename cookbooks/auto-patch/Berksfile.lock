@@ -1,0 +1,13 @@
+DEPENDENCIES
+  auto-patch
+    path: .
+    metadata: true
+  minitest-handler
+
+GRAPH
+  auto-patch (0.1.10)
+    cron (>= 0.0.0)
+  chef_handler (1.3.0)
+  cron (1.7.6)
+  minitest-handler (1.5.0)
+    chef_handler (>= 0.0.0)

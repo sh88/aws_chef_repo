@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      box: java7
+      network:
+      # - ["forwarded_port", {guest: 9200, host: 9201}]
+      - ["private_network", {ip: "192.168.33.37"}]
+
+suites:
+  - name: default
+    run_list: sudo_logstash::default
+    attributes:
+
+
+# default['kibana']['es_server'] = '192.168.33.35'
+
+# default['kibana']['es_server'] = '192.168.33.10'
+
+
+# # default['kibana']['es_server'] = '54.249.40.219'
+
+# # http://192.168.33.10:9200/
